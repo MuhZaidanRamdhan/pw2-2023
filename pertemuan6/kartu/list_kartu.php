@@ -6,7 +6,7 @@ $sql = "SELECT * FROM kartu";
 $rs = $dbh->query($sql);
 ?>
 
-<a class="btn btn-success" href="form_kartu.php" role="button">Create Pembelian</a>
+<a class="btn btn-success" href="form_kartu.php" role="button">Create kartu</a>
 <table class="table" width="100%" border="1" cellspacing="2" cellpadding="2">
     <thead>
         <tr>

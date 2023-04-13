@@ -7,7 +7,7 @@ require_once '../dbkoneksi.php';
     $_id = isset($_GET['id']) ? $_GET['id'] : null;
     if(!empty($_id)){
         // ambil data produk berdasarkan id
-        $sql = "SELECT * FROM pembelian WHERE id=?";
+        $sql = "SELECT * FROM kartu WHERE id=?";
         $st = $dbh->prepare($sql);
         $st->execute([$_id]);
         $row = $st->fetch();
