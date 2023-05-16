@@ -34,7 +34,7 @@ require_once '../dbkoneksi.php';
     </div>
   </div>
   <div class="form-group row">
-    <label for="nomor" class="col-4 col-form-label">Nama</label> 
+    <label for="nama" class="col-4 col-form-label">Nama </label> 
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">
@@ -62,7 +62,7 @@ require_once '../dbkoneksi.php';
     </div>
   </div>
   <div class="form-group row">
-    <label for="stok" class="col-4 col-form-label">Iuran</label> 
+    <label for="stok" class="col-4 col-form-label">iuran</label> 
     <div class="col-8">
       <div class="input-group">
         <div class="input-group-prepend">

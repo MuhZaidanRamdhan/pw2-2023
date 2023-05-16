@@ -6,7 +6,7 @@ $sql = "SELECT * FROM pembelian";
 $rs = $dbh->query($sql);
 ?>
 
-<a class="btn btn-success" href="form_kartu.php" role="button">Create Pembelian</a>
+<a class="btn btn-success" href="form_pembelian.php" role="button">Create Pembelian</a>
 <table class="table" width="100%" border="1" cellspacing="2" cellpadding="2">
     <thead>
         <tr>
@@ -37,7 +37,7 @@ $rs = $dbh->query($sql);
                     <a class="btn btn-primary" href="view_pembelian.php?id=<?= $row['id'] ?>">View</a>
                     <a class="btn btn-primary" href="form_pembelian.php?idedit=<?= $row['id'] ?>">Edit</a>
                     <a class="btn btn-primary" href="delete_pembelian.php?id=<?=$row['id']?>"
-                onclick="if(!confirm('Anda Yakin Hapus Data Kartu <?=$row['nama']?>?')) {return false}"
+                onclick="if(!confirm('Anda Yakin Hapus Data Kartu <?=$row['id']?>?')) {return false}"
                 >Delete</a>
                 </td>
             </tr>

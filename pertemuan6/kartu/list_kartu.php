@@ -30,10 +30,10 @@ $rs = $dbh->query($sql);
                 <td><?= $row['diskon'] ?></td>
                 <td><?= $row['iuran'] ?></td>
                 <td>
-                    <a class="btn btn-primary" href="view_kartu.php?id=<?= $row['id'] ?>">View</a>
-                    <a class="btn btn-primary" href="form_kartu.php?idedit=<?= $row['id'] ?>">Edit</a>
-                    <a class="btn btn-primary" href="delete_kartu.php?id=<?=$row['id']?>"
-                onclick="if(!confirm('Anda Yakin Hapus Data Kartu <?=$row['nama']?>?')) {return false}"
+                <a class="btn btn-primary" href="view_kartu.php?id=<?=$row['id']?>">View</a>
+                <a class="btn btn-primary" href="form_kartu.php?id=<?=$row['id']?>">Edit</a>
+                <a class="btn btn-primary" href="delete_kartu.php?id=<?=$row['id']?>"
+                onclick="if(!confirm('Anda Yakin Hapus Data Vendor <?=$row['nama']?>?')) {return false}"
                 >Delete</a>
                 </td>
             </tr>
