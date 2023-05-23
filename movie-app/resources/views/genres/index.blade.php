@@ -36,51 +36,17 @@
                 </tr>
             </tfoot>
             <tbody>
+                @foreach ($genres as $genre)
                 <tr>
-                    <td>1</td>
-                    <td>Thriller</td>
-                    <td>Cerita seru adalah sebuah genre sastra, film, dan acara televisi yang memiliki banyak subtipe di dalamnya</td>
+                    <td>{{ $genre['no'] }}</td>
+                    <td>{{ $genre['genre'] }}</td>
+                    <td>{{ $genre['deskripsi'] }}</td>
                     <td>
                         <a href="" class="btn btn-sm btn-warning"> Edit</a>
                         <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
                     </td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Romance</td>
-                    <td>kisah cinta yang direkam dalam media visual untuk disiarkan di bioskop dan televisi yang berfokus pada gairah,<br> emosi, dan keterlibatan kasih sayang dari karakter utama dan perjalanan yang benar-benar kuat,<br> cinta sejati dan murni mereka yang akan membawa mereka melalui kencan, pacaran atau pernikahan</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                        <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Drama</td>
-                    <td>genre karya sastra yang menggambarkan kehidupan manusia dengan gerak. Drama menggambarkan realita kehidupan,<br> watak, serta tingkah laku manusia melalui peran dan dialog yang dipentaskan.Kisah dan cerita dalam drama memuat konflik <br> dan emosi yang secara khusus ditujukan untuk pementasan teater.</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                        <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Action</td>
-                    <td>genre utama dalam film yang satu atau beberapa tokohnya terlibat dalam tantangan yang memerlukan <br> kekuatan fisik ataupun kemampuan khusus.</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                        <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Sci-Fi</td>
-                    <td>suatu bentuk fiksi spekulatif yang terutama membahas tentang pengaruh sains dan teknologi yang <br> diimajinasikan terhadap masyarakat dan para individual</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                        <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                    </td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

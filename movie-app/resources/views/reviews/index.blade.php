@@ -22,10 +22,10 @@
                 <tr>
                     <th>No</th>
                     <th>Nama</th>
-                    <th>Username</th>
-                    <th>Password</th>
-                    <th>Email</th>
-                    <th>Role</th>
+                    <th>User</th>
+                    <th>Rating</th>
+                    <th>Review</th>
+                    <th>Tanggal</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -33,74 +33,28 @@
                 <tr>
                     <th>No</th>
                     <th>Nama</th>
-                    <th>Username</th>
-                    <th>Password</th>
-                    <th>Email</th>
-                    <th>Role</th>
+                    <th>User</th>
+                    <th>Rating</th>
+                    <th>Review</th>
+                    <th>Tanggal</th>
                     <th>Action</th>
                 </tr>
             </tfoot>
             <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Parasite</td>
-                    <td>Muhammad Fadhillah</td>
-                    <td>9.5</td>
-                    <td>Film nya bagus dan menegangkan, pokoknya rekomended deh!</td>
-                    <td>2022-03-10</td>
+                @foreach ($reviews as $review)
+                <tr>    
+                    <td>{{ $review['no'] }}</td>
+                    <td>{{ $review['film'] }}</td>
+                    <td>{{ $review['user'] }}</td>
+                    <td>{{ $review['rating'] }}</td>
+                    <td>{{ $review['review'] }}</td>
+                    <td>{{ $review['tanggal'] }}</td>
                     <td>
                         <a href="" class="btn btn-sm btn-warning"> Edit</a>
                         <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
                     </td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Avengers: Endgame</td>
-                    <td>Rian Satria</td>
-                    <td>9.8</td>
-                    <td>Film nya menegangkan, sedihnya dapet banget</td>
-                    <td>2022-03-10</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                        <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>The Dark Knight</td>
-                    <td>Dinda Maulidia</td>
-                    <td>9.3</td>
-                    <td>Film nya bagus bangett, seseru itu</td>
-                    <td>2022-03-10</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                        <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>The Godfather</td>
-                    <td>Muh Zaidan Ramdhan</td>
-                    <td>9.0</td>
-                    <td>Speechlesss!!!</td>
-                    <td>2022-03-10</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                        <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Forrest Gump</td>
-                    <td>Fikri Maulana</td>
-                    <td>8.8</td>
-                    <td>Yang terbaik, Forrest Gump adalah fantasi yang lembut dan <br>elegiac tentang cinta dan kepercayaan</td>
-                    <td>2022-03-10</td>
-                    <td>
-                        <a href="" class="btn btn-sm btn-warning"> Edit</a>
-                        <a href="" class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')"> Delete</a>
-                    </td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
