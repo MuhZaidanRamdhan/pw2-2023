@@ -12,10 +12,9 @@ class GenreController extends Controller
      */
     public function index()
     {
-        $genre = new Genre;
-        $data = $genre->getAllGenres();
+        $genres = Genre::all();
 
-        return view('genres/index', ['genres' => $data]);
+        return view('genres/index', compact('genres'));
     }
 
     /**
