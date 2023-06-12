@@ -47,13 +47,14 @@
                     <td>{{ $genre->nama }}</td>
                     <td>{{ $genre->deskripsi }}</td>
                     <td>
-                        
+                        <div class="d-flex justify-content-center">
+                        <a href="/genres/{{ $genre->id }}/edit" class="btn btn-sm btn-warning"> Edit</a>
                         <form action="/genres/{{$genre->id}}" method="post">
                             @csrf
                             @method('DELETE')
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
                             <button type="submit"  class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')">Delete</button>
                         </form>
+                    </div>
                     </td>
                 </tr>
                 @endforeach

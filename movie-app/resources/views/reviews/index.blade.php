@@ -55,12 +55,14 @@
                     <td>{{ $review->review }}</td>
                     <td>{{ $review->tanggal }}</td>
                     <td>
+                        <div class="d-flex justify-content-center">
+                        <a href="/reviews/{{ $review->id }}/edit" class="btn btn-sm btn-warning"> Edit</a>
                         <form action="/reviews/{{$review->id}}" method="post">
                             @csrf
                             @method('DELETE')
-                            <a href="" class="btn btn-sm btn-warning"> Edit</a>
                             <button type="submit"  class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')">Delete</button>
                         </form>
+                        </div>
                     </td>
                 </tr>
                 @endforeach

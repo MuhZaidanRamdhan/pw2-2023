@@ -18,7 +18,7 @@ class ReviewsSeeder extends Seeder
             'user' => ' Muh Fadhillah',
             'rating' => 9.8,
             'review' => 'Keren banget!',
-            'tanggal' => '22-10-2022',
+            'tanggal' => '2022-10-22',
         ]);
 
         Review::create([
@@ -26,7 +26,7 @@ class ReviewsSeeder extends Seeder
             'user' => 'Rian Satria',
             'rating' => 9.1,
             'review' => 'filmnya bikin sedih banget!',
-            'tanggal' => '16-12-2022',
+            'tanggal' => '2022-12-16',
         ]);
 
         Review::create([
@@ -34,7 +34,7 @@ class ReviewsSeeder extends Seeder
             'user' => 'Fikri Maulana',
             'rating' => 9.4,
             'review' => 'Keren banget! ga sabar nunggu lanjutannya!',
-            'tanggal' => '12-04-2022',
+            'tanggal' => '2022-04-12',
         ]);
 
         Review::create([
@@ -42,7 +42,7 @@ class ReviewsSeeder extends Seeder
             'user' => 'Nanda Putra',
             'rating' => 9.1,
             'review' => 'Lucu banget, recomended buat ditonton!',
-            'tanggal' => '02-01-2019',
+            'tanggal' => '2019-01-02',
         ]);
 
         Review::create([
@@ -50,7 +50,7 @@ class ReviewsSeeder extends Seeder
             'user' => 'Dinda Maulidia',
             'rating' => 9.6,
             'review' => 'Kelincinya gemes banget, suka suka suka!',
-            'tanggal' => '02-01-2019',
+            'tanggal' => '2019-01-02',
         ]);
         
     }

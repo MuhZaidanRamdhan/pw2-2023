@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('user');
             $table->float('rating');
             $table->string('review');
-            $table->string('tanggal');
+            $table->date('tanggal');
             $table->timestamps();
         });
     }
