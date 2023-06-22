@@ -41,11 +41,11 @@
 
         <div class="p-5 mb-4 bg-body-tertiary rounded-3">
             <div class="container">
-                @if (session('success'))
+                {{-- @if (session('success'))
                     <div class="alert alert-success">
                         {{ session('success') }}
                     </div>
-                @endif
+                @endif --}}
                 <div class="container-fluid py-5">
                     <h1 class="display-5 fw-bold">Watch anywhere. Cancel anytime.</h1>
                     <p class="col-md-8 fs-4">Dapatkan pembaruan tentang rilis film terkini, trailer eksklusif, dan berita terbaru dari dunia perfilman. Tunggu apa lagi? Mulailah menjelajahi dunia hiburan dengan FilmFlix sekarang juga!</p>
@@ -62,9 +62,9 @@
                     @foreach ($movies as $movie)
                     <div class="col">
                         <div class="card shadow-sm">
-                            <img src="https://dummyimage.com/600x400/808080/fff.png">
+                            <img src="/assets/img/{{ $movie->poster }}" style="height:400px; background-size:cover; ">
                             <div class="card-body">
-                                <h4 class="card-title"><a href="#">{{ $movie->judul }}</a></h4>
+                                <h4 class="card-title"><a href="#" style="text-decoration: none">{{ $movie->judul }}</a></h4>
                                 <p class="card-text">Genre: {{ $movie->genre->nama }}</p>
                                 <p class="card-text">Rating: {{ $movie->rating }} &#11088;</p>
                                 <p class="card-text">Tahun: {{ $movie->tahun }}</p>
@@ -96,7 +96,7 @@
             <p class="text-center text-body-secondary">&copy; 2023 Company, Inc</p>
         </footer>
     </div>
-
+    @include('sweetalert::alert')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 

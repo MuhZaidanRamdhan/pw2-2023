@@ -51,20 +51,46 @@
                 @foreach ($movies as $movie)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $movie->judul }}</td>
-                    <td>{{ $movie->poster }}</td>
-                    <td>{{ $movie->genre->nama }}</td>
-                    <td>{{ $movie->negara }}</td>
-                    <td>{{ $movie->tahun }}</td>
-                    <td>{{ $movie->rating }}</td>
                     <td>
-                        <div class="d-flex justify-content-center">
-                        <a href="/movies/{{ $movie->id }}/edit" class="btn btn-sm btn-warning">Edit</a>
-                        <form action="/movies/{{$movie->id}}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit"  class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')">Delete</button>
-                        </form>
+                        <div class="d-flex justify-content-center align-items-center">
+                            {{ $movie->judul }}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <img src="/assets/img/{{ $movie->poster }}" alt="" style="width: 50px; heighpt:50px;">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex justify-content-center align-items-center">
+                            {{ $movie->genre->nama }}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex justify-content-center align-items-center">
+                            {{ $movie->negara }}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex justify-content-center align-items-center">
+                            {{ $movie->tahun }}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex justify-content-center align-items-center">
+                            {{ $movie->rating }}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex justify-content-center align-items-center">
+                            <div class="d-flex justify-content-center">
+                            <a href="/movies/{{ $movie->id }}/edit" class="btn btn-sm btn-warning" style="margin-right:3px;">Edit</a>
+                            <form action="/movies/{{$movie->id}}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit"  class="btn btn-sm btn-danger" onclick="return confirm('Apakah anda yakin ingin menghapus?')">Delete</button>
+                            </form>
+                            </div>
                         </div>
                     </td>
                 </tr>

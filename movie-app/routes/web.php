@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MovieController;
@@ -20,8 +21,22 @@ use Illuminate\Support\Facades\Route;
 // landing page
 Route::get('/',[HomeController::class, 'index']);
 
+// Authentication
+Route::get('/register', [AuthController::class, 'showRegistrationForm']);
+Route::post('/register', [AuthController::class, 'register']);
+
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [AuthController::class, 'login']);
+
+// dasboard admin
+Route::get('/dasboard', function () {
+    return view('dasboard/index');
+});
+
 // for movies
-Route::resource('/movies', MovieController::class);
+Route::group(['middleware' => 'auth'], function(){
+    Route::resource('/movies', MovieController::class);
+});
 
 // Route::get('/movies',[MovieController::class, 'index']);
 // Route::post('/movies', [MovieController::class, 'store']);

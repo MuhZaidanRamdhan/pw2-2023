@@ -23,7 +23,7 @@
             Movies Data
         </div>
         <div class="card-body">
-            <form method="POST" action="/movies">
+            <form enctype="multipart/form-data" method="POST" action="/movies">
                 @csrf
                 <div class="mb-3 row">
                     <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Title </label>
@@ -34,7 +34,7 @@
                 <div class="mb-3 row">
                     <label for="exampleFormControlInput1" class="col-sm-2 col-form-label">Poster </label>
                     <div class="col-sm-10">
-                      <input type="text" id="exampleFormControlInput1" class="form-control" name="poster">
+                      <input type="file" id="exampleFormControlInput1" class="form-control" name="poster">
                     </div>
                   </div>
                     <div class="mb-3 row">
